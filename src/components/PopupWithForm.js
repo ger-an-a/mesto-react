@@ -1,5 +1,5 @@
 import React from 'react';
-function PopupWihForm(props) {
+function PopupWithForm(props) {
     React.useEffect(() => {
         function handleEscClose(evt) {
             if (evt.key === 'Escape') {

@@ -3,7 +3,7 @@ import Footer from './Footer';
 import Header from './Header';
 import ImagePopup from './ImagePopup';
 import Main from './Main';
-import PopupWihForm from './PopupWithForm';
+import PopupWithForm from './PopupWithForm';
 
 function App() {
   const [isEditProfilePopupOpen, setStateEditPopup] = React.useState(false);
@@ -44,7 +44,7 @@ function App() {
         <Header />
         <Main onCardClick={handleCardClick} onEditAvatar={handleEditAvatarClick} onEditProfile={handleEditProfileClick} onAddPlace={handleAddPlaceClick} />
         <Footer />
-        <PopupWihForm name="edit" title="Редактировать профиль" btn="Сохранить" onClose={closeAllPopups} isOpen={isEditProfilePopupOpen} children={
+        <PopupWithForm name="edit" title="Редактировать профиль" btn="Сохранить" onClose={closeAllPopups} isOpen={isEditProfilePopupOpen} children={
           <>
             <input className="form__input" id="name-input" type="text" minLength="2" maxLength="40" name="userName"
               placeholder="Имя пользователя" required />
@@ -54,7 +54,7 @@ function App() {
             <span className="form__input-error activity-input-error"></span>
           </>
         } />
-        <PopupWihForm name="add" title="Новое место" btn="Создать" onClose={closeAllPopups} isOpen={isAddPlacePopupOpen} children={
+        <PopupWithForm name="add" title="Новое место" btn="Создать" onClose={closeAllPopups} isOpen={isAddPlacePopupOpen} children={
           <>
             <input className="form__input" id="title-input" minLength="2" maxLength="30" type="text" name="title"
               placeholder="Название" required />
@@ -63,14 +63,14 @@ function App() {
             <span className="form__input-error sorce-input-error"></span>
           </>
         } />
-        <PopupWihForm name="avatar" title="Обновить аватар" btn="Сохранить" onClose={closeAllPopups} isOpen={isEditAvatarPopupOpen} children={
+        <PopupWithForm name="avatar" title="Обновить аватар" btn="Сохранить" onClose={closeAllPopups} isOpen={isEditAvatarPopupOpen} children={
           <>
             <input className="form__input" id="avatar-input" type="url" name="sorce" placeholder="Ссылка на картинку"
               required />
             <span className="form__input-error avatar-input-error"></span>
           </>
         } />
-        <PopupWihForm name="delete" title="Вы уверены?" btn="Да" onClose={closeAllPopups} children={<></>} />
+        <PopupWithForm name="delete" title="Вы уверены?" btn="Да" onClose={closeAllPopups} children={<></>} />
 
         <ImagePopup card={selectedCard} onClose={closeAllPopups} />
       </div>

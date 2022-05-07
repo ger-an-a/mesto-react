@@ -6,7 +6,7 @@ function Card(props) {
     return (
         <li className="card">
             <button className="button card__delete-btn" type="button" aria-label="Удалить."></button>
-            <img onClick={handleClick} className="card__img" src={props.cardData.link} />
+            <img onClick={handleClick} className="card__img" src={props.cardData.link} alt={props.cardData.name} />
             <div className="card__description">
                 <h2 className="card__title">{props.cardData.name}</h2>
                 <div className="card__like">

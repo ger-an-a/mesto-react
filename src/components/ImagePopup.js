@@ -4,7 +4,7 @@ function ImagePopup(props) {
             <div className="popup__container" onClick={(evt) => { evt.stopPropagation(); }}>
                 <button className="button button_target_close popup__close-btn" onClick={props.onClose} type="button" aria-label="Отмена."></button>
                 <div className="photo-viewport">
-                    <img className="photo-viewport__img" src={props.card.link} />
+                    <img className="photo-viewport__img" src={props.card.link} alt={props.card.name} />
                     <h2 className="photo-viewport__title">{props.card.name}</h2>
                 </div>
             </div>

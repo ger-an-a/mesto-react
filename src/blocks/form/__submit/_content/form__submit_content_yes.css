@@ -1,0 +1,9 @@
+.form__submit_content_yes {
+  margin: 38px auto 37px;
+}
+
+@media (max-width:430px) {
+  .form__submit_content_yes {
+    margin: 30px auto 25px;
+  }
+}

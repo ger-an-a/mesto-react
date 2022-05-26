@@ -1,5 +1,4 @@
 import React from "react";
-import { CardsContext } from "../contexts/CardsContext";
 import PopupWithForm from "./PopupWithForm";
 
 function AddPlacePopup(props) {

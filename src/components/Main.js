@@ -20,16 +20,8 @@ function Main(props) {
                 <ul className="cards__grid">
                     {
                         props.cards.map((item) => {
-                            const isOwn = item.owner._id === currentUser._id;
-                            const cardDeleteBtnClassName = (
-                                `${isOwn ? 'card__delete-btn' : 'card__delete-btn card__delete-btn_hidden'}`
-                            );
-                            const isLiked = item.likes.some(i => i._id === currentUser._id);
-                            const cardLikeButtonClassName = (
-                                `${isLiked ? 'card__like-btn card__like-btn_active' : 'card__like-btn'}`
-                            );
                             return (
-                                <Card onCardDelete={props.onCardDelete} onCardLike={props.onCardLike} key={item._id} likeBtnClass={cardLikeButtonClassName} deleteBtnClass={cardDeleteBtnClassName} cardData={item} onCardClick={props.onCardClick} />
+                                <Card onCardDelete={props.onCardDelete} onCardLike={props.onCardLike} key={item._id} cardData={item} onCardClick={props.onCardClick} />
                             )
                         })
                     }

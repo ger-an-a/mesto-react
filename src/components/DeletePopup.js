@@ -15,7 +15,7 @@ function DeletePopup(props) {
     }, [props.isOpen]);
 
     return (
-        <PopupWithForm onSubmit={handleSubmit} name="delete" title="Вы уверены?" btn={btnText} onClose={props.onClose} isOpen={props.isOpen} children={<></>} />
+        <PopupWithForm onSubmit={handleSubmit} name="delete" title="Вы уверены?" btn={btnText} onClose={props.onClose} isOpen={props.isOpen} />
     )
 }
 

@@ -11,6 +11,10 @@ class Api {
     return Promise.reject(`Ошибка: ${res.status}`);
   }
 
+  changeLikeCardStatus(cardId, isLiked) {
+    return isLiked ? this.deleteLike(cardId) : this.putLike(cardId);
+  }
+
   putLike(cardId) {
     return fetch(`${this._baseUrl}/cards/${cardId}/likes`, {
       method: 'PUT',
